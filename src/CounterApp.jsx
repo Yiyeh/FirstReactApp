@@ -4,11 +4,8 @@ import { useState } from 'react'
 export default function CounterApp( {value} ) {
 
     const [ counter, setCounter ] = useState ( value )
-
     const handleAdd = () => setCounter ( counter + 1 );
-
-    const handleSub = () => setCounter ( counter - 1 );
-
+    const handleSubstract = () => setCounter ( counter - 1 );
     const handleReset = () => setCounter ( 0 );
 
     return (
@@ -17,10 +14,9 @@ export default function CounterApp( {value} ) {
             <h2> { counter } </h2>
             <button onClick={handleAdd}> +1 </button>
             <button onClick={handleReset}> Reset </button>
-            <button onClick={handleSub}> -1 </button>
+            <button onClick={handleSubstract}> -1 </button>
         </>
     )
-    
 }
 
 
